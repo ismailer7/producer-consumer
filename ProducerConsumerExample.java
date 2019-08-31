@@ -14,7 +14,17 @@ public class ProducerConsumerExample {
         producer.start();
         consumer.start();
 
+        // we can use Runnable interface to create threads.
 
+        
+        Thread th = new Thread(new Runnable() { // annonymous class
+            @Override
+            public void run() {
+                System.out.println("Thread running..");
+            }
+        }); 
+
+        th.start();
     }
 
 
